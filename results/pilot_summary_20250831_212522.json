@@ -1,0 +1,22 @@
+{
+  "n_pairs": 35,
+  "timestamp": "20250831_212522",
+  "overall_effects": {
+    "density": -0.03096528159592007,
+    "clustering": -0.03811702450398671,
+    "hierarchy": 0.04610849216913906
+  },
+  "significant_tests": 12,
+  "layer_means": {
+    "4": -0.029521852276818368,
+    "5": -0.037457752068099835,
+    "6": -0.029499707254375687,
+    "7": -0.027381814784386387
+  },
+  "tokenization": {
+    "spanish_mean_tokens": 8.285714285714286,
+    "english_mean_tokens": 7.0285714285714285,
+    "spanish_subword_ratio": 0.17150270364556078,
+    "english_subword_ratio": 0.049999999999999996
+  }
+}

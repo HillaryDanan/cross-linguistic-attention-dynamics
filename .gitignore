@@ -1,0 +1,29 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python
+*.pyc
+__pycache__/
+.Python
+*.so
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data - only track processed, not raw
+data/raw/
+
+# Temporary files
+*.log
+*.tmp
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
