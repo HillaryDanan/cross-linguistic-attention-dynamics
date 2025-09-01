@@ -300,7 +300,7 @@ class FullStudyRunner:
                         'median': float(np.median(density_diffs)),
                         'p_value': float(p_value),
                         'effect_size': float(effect_size),
-                        'significant': p_value < 0.05
+                        'significant': bool(p_value < 0.05)
                     }
             
             # Efficiency analysis

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-08-31T22:36:04.814652",
+  "n_samples": 50,
+  "models_tested": 2,
+  "models": {
+    "mbert": {
+      "mean_density_diff": -0.12620240870240867,
+      "mean_sparsity_diff": 0.1262024087024087,
+      "p_value": 7.222037513283772e-10,
+      "significant": 

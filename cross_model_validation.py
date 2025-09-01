@@ -261,7 +261,7 @@ class CrossModelValidator:
                 if len(np.unique(results['density_differences'])) > 1:
                     stat, p_value = wilcoxon(results['density_differences'])
                     results['p_value'] = p_value
-                    results['significant'] = p_value < 0.05
+                    results['significant'] = bool(p_value < 0.05)
                 else:
                     results['p_value'] = 1.0
                     results['significant'] = False
@@ -453,7 +453,19 @@ def main():
     # Save JSON results
     json_file = f'results/validation/cross_model_results_{timestamp}.json'
     with open(json_file, 'w') as f:
-        json.dump(results, f, indent=2)
+        # Convert numpy types for JSON serialization
+        def convert_numpy(obj):
+            if isinstance(obj, np.bool_):
+                return bool(obj)
+            if isinstance(obj, np.integer):
+                return int(obj)
+            if isinstance(obj, np.floating):
+                return float(obj)
+            if isinstance(obj, np.ndarray):
+                return obj.tolist()
+            raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
+        
+        json.dump(results, f, indent=2, default=convert_numpy)
     print(f"\nResults saved to {json_file}")
     
     # Save markdown report

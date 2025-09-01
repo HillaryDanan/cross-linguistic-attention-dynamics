@@ -1,0 +1,13 @@
+{
+  "n_samples": 1000,
+  "timestamp": "2025-08-31T22:18:20.438529",
+  "model": "bert-base-multilingual-cased",
+  "layers": {
+    "0": {
+      "density": {
+        "mean": -0.0698522973715768,
+        "std": 0.025972769809434193,
+        "median": -0.06949252378463792,
+        "p_value": 3.222988437861127e-165,
+        "effect_size": -2.6894435062239577,
+        "significant": 
